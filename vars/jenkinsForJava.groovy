@@ -3,7 +3,7 @@ def call(String repoUrl) {
        agent any
       
        stages {
-           stage("Tools initialization") {
+           stage("Tools") {
                steps {
                    sh "mvn --version"
                    sh "java -version"
