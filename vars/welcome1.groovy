@@ -2,8 +2,8 @@ pipeline {
   agent any
 
   tools {
-    jdk 'jdk_1.8.0_151'
-    jdk 'jdk_1.6.0_45'
+    jdk 'jdk_1.8.0_301'
+    
   }
 
   stages {
@@ -13,11 +13,7 @@ pipeline {
         sh 'javac -version'
       }
     }
-    stage('java 6') {
-      steps {
-        sh 'java -version'
-        sh 'javac -version'
-      }
-    }
+  =
+  
   }
 }
