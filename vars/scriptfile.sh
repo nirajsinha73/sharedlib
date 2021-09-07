@@ -1,1 +1,1 @@
-java --version
+sh 'java --version'
