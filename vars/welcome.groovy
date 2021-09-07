@@ -1,5 +1,5 @@
 def call(name)
 {
     echo "$name"
-    echo 'java --version'
+    sh 'java --version'
 }
