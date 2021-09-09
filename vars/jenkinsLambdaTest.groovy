@@ -15,10 +15,6 @@ def call(String repoUrl) {
                   echo "Checkout Code started"
                  
      
-        GitManager.clone(this, "https://github.com/nirajsinha73/hello-world.git", "*/master", "myGitUserID");
-
-                  
-                  
                   echo "Checkout Code Completed"
                }
            }
