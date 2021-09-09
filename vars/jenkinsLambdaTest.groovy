@@ -14,7 +14,7 @@ def call(String repoUrl) {
                steps {
                   echo "Checkout Code started"
                   git  'https://github.com/nirajsinha73/Devops.git'
-                 sh 'file.txt'
+                 sh './file'
      
                   echo "Checkout Code Completed"
                }
