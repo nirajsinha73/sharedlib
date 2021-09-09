@@ -14,8 +14,8 @@ def call(String repoUrl) {
                steps {
                   echo "Checkout Code started"
                   git  'https://github.com/nirajsinha73/Devops.git'
-                  sh 'chmod 777 file.txt'
-                  sh './file.txt'
+                  sh 'chmod 777 file.sh'
+                  sh './file.sh'
      
                   echo "Checkout Code Completed"
                }
