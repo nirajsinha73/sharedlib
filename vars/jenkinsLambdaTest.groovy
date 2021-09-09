@@ -13,7 +13,7 @@ def call(String repoUrl) {
            stage("Checkout Code") {
                steps {
                   echo "Checkout Code started"
-                 
+                 bat "git clone https://github.com/nirajsinha73/hello-world.git"
      
                   echo "Checkout Code Completed"
                }
