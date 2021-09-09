@@ -23,7 +23,7 @@ def call(String repoUrl) {
            }
            stage("Running Testcase") {
                steps {
-                   sh "mvn -Dusername=${nirajsinha310@gmail.com} -DaccessKey=${niraj@73} test"
+                   sh "mvn -Dusername=$nirajsinha310@gmail.com -DaccessKey=$niraj@73 test"
                }
            }
        }
