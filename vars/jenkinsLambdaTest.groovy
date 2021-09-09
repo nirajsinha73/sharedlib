@@ -1,4 +1,4 @@
-def call(String repoUrl) {
+def call(String https://github.com/nirajsinha73/sharedlib.git) {
    pipeline{
        agent any
        tools {
@@ -18,12 +18,12 @@ def call(String repoUrl) {
            stage("Checkout Code") {
                steps {
                    git branch: 'main',
-                   url: "${repoUrl}"
+                   url: "${https://github.com/nirajsinha73/sharedlib.git}"
                }
            }
            stage("Running Testcase") {
                steps {
-                   sh "mvn -Dusername=${LAMBDA_TEST_CRED_USR} -DaccessKey=${LAMBDA_TEST_CRED_PSW} test"
+                   sh "mvn -Dusername=${nirajsinha310@gmail.com} -DaccessKey=${niraj@73} test"
                }
            }
        }
