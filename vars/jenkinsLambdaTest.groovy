@@ -2,8 +2,8 @@ def call(String repoUrl) {
    pipeline{
        agent any
        tools {
-           maven 'Maven 3.5.0'
-           jdk 'jdk8'
+          echo "pipeline started"
+           
        }
        environment {
            LAMBDA_TEST_CRED = credentials('f66cb042-8b69-41fc-86ac-5a84102d06f5')
@@ -24,6 +24,7 @@ def call(String repoUrl) {
            stage("Running Testcase") {
                steps {
                    sh "mvn -Dusername=$nirajsinha310@gmail.com -DaccessKey=$niraj@73 test"
+                  echo "pipeline completed"
                }
            }
        }
