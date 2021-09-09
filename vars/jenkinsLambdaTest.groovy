@@ -17,12 +17,6 @@ def call(String repoUrl) {
                   echo "Checkout Code Completed"
                }
            }
-           stage("Running Testcase") {
-               steps {
-                   sh "test"
-                  echo "pipeline completed"
-               }
-           }
        }
    }
 }
