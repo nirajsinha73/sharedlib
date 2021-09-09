@@ -9,7 +9,7 @@ def call(String repoUrl) {
            stage("Tools initialization") {
                steps {
                   echo "pipeline started"
-                       sh "mvn --version"
+                    
                        sh "java -version"
                    }
                }
