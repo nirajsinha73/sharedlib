@@ -11,8 +11,8 @@ import org.testng.annotations.Test;
 public class LambdaTest {
 
    public RemoteWebDriver driver = null;
-   String username = "";
-   String accessKey = "";
+   String username = nirajsinha310@gmail.com;
+   String accessKey = niraj@73;
 
    @BeforeTest
    public void setUp() throws Exception {
