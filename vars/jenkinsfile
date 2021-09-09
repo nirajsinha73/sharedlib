@@ -1,24 +1,37 @@
-#!/usr/bin/env groovy
-import com.cleverbuilder.GlobalVars
-import com.cleverbuilder.SampleClass
-
 pipeline {
-    agent any
-    stages {
-        stage('Demo') {
-            steps {
-                echo 'Hello, world'
-                sayHello 'Dave'
-
-                echo 'The value of foo is : ' + GlobalVars.foo
-
-                script {
-                    def person = new SampleClass()
-                    person.age = 21
-                    person.increaseAge(10)
-                    echo 'Incremented age, is now : ' + person.age
-                }
-            }
-        }
-    }
+       agent any
+       tools {
+           maven 'Maven 3.5.0'
+           jdk 'jdk8'
+       }
+       stages {
+           stage("Tools initialization") {
+               steps {
+                   sh "mvn --version"
+                   sh "java -version"
+               }
+           }
+           stage("Checkout Code") {
+               steps {
+                   git branch: 'master',
+                       url: "${repoUrl}"
+               }
+           }
+           stage("Cleaning workspace") {
+               steps {
+                   sh "mvn clean"
+               }
+           }
+           stage("Running Testcase") {
+              steps {
+                   sh "mvn test"
+               }
+           }
+           stage("Packing Application") {
+               steps {
+                   sh "mvn package -DskipTests"
+               }
+           }
+       }
+   }
 }
