@@ -13,7 +13,7 @@ def call(String repoUrl) {
            stage("Checkout Code") {
                steps {
                   echo "Checkout Code started"
-                  git  'https://github.com/nirajsinha73/hello-world.git'
+                  git  'https://github.com/nirajsinha73/Devops.git'
      
                   echo "Checkout Code Completed"
                }
