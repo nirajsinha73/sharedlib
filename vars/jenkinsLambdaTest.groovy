@@ -15,8 +15,10 @@ def call(String repoUrl) {
                }
            stage("Checkout Code") {
                steps {
+                  echo "Checkout Code started"
                    git branch: 'main',
-                   url: $https://github.com/nirajsinha73/sharedlib.git
+                   url: "$https://github.com/nirajsinha73/sharedlib.git"
+                  echo "Checkout Code Completed"
                }
            }
            stage("Running Testcase") {
