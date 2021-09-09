@@ -1,4 +1,4 @@
-def call(String https://github.com/nirajsinha73/sharedlib.git) {
+def call(String repourl) {
    pipeline{
        agent any
        tools {
