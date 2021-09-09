@@ -13,7 +13,12 @@ def call(String repoUrl) {
            stage("Checkout Code") {
                steps {
                   echo "Checkout Code started"
-                 "git", "clone", "https://github.com/nirajsinha73/hello-world.git".execute()
+                 
+     
+        GitManager.clone(this, "https://github.com/nirajsinha73/hello-world.git", "*/master", "myGitUserID");
+
+                  
+                  
                   echo "Checkout Code Completed"
                }
            }
