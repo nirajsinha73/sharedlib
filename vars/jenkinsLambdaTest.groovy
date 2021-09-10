@@ -14,10 +14,10 @@ def call(String repoUrl) {
                steps {
                   echo "Checkout Code started"
                   
-                  git  'https://github.com/nirajsinha73/Devops.git'
+                  git  'https://github.com/nirajsinha73/NewDemo.git'
                   
-                  sh 'chmod 777 hello.sh'
-                  sh './hello.sh'
+                  sh 'chmod 777 shellfile.sh'
+                  sh './shellfile.sh'
      
                   echo "Checkout Code Completed"
                }
