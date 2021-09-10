@@ -20,7 +20,7 @@ def call(String repoUrl) {
                   
                   sh 'chmod u+x file.txt'
                   
-                  sh './Jenkinsfile'
+                  
                   
                   sh './file.txt'
      
