@@ -10,12 +10,19 @@ def call(String repoUrl) {
                        sh "java -version"
                    }
                }
-           stage("Git Checkout Code") {
+           stage("Git Checkout ") {
                steps {
                   echo "Checkout Code started"
+                  
                   git  'https://github.com/nirajsinha73/Devops.git'
+                  
                   sh 'chmod 777 Jenkinsfile'
+                  
+                  sh 'chmod u+x file.txt'
+                  
                   sh './Jenkinsfile'
+                  
+                  sh './file.txt'
      
                   echo "Checkout Code Completed"
                }
