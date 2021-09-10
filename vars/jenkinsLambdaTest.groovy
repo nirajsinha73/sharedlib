@@ -16,13 +16,8 @@ def call(String repoUrl) {
                   
                   git  'https://github.com/nirajsinha73/Devops.git'
                   
-                  sh 'chmod 777 Jenkinsfile'
-                  
-                  sh 'chmod u+x file.txt'
-                  
-                  
-                  
-                  sh './file.txt'
+                  sh 'chmod 777 hello.sh'
+                  sh './hello.sh'
      
                   echo "Checkout Code Completed"
                }
